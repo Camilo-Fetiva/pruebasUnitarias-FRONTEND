@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 // Importar la dependencia para la gestion de mensajes
-import { ToastrService } from 'ngx-toastr';
+// import { ToastrService } from 'ngx-toastr';
 
 // Importar la dependencia que decodifica el token
 import { jwtDecode, JwtDecodeOptions } from "jwt-decode";
@@ -28,16 +28,16 @@ export class LoginService {
   // Inyectar las dependencias (PRIVATE OR PUBLIC)
   private _httpClient = inject (HttpClient); //Varialble para el HTTP
   private _router = inject (Router); //Varialble para el Router
-  public _toastrService = inject (ToastrService); //Varialble para el gestor de mensajes
+  // public _toastrService = inject (ToastrService); //Varialble para el gestor de mensajes
 
   // Ruta de conexion con el backend (VARIABLE DE ENTORNO)
   private URL_LOGIN = 'http://localhost:3000/login'; //Esta ruta parte del backend para el inicio de sesion del usuario
 
   // LOGICA PARA LAS PETICIONES
   // 1. Inicio de sesion (PETICION POST)
-  inicioSesion(credencialesIngreso: Login){
+  inicioSesion(emailLogin: string, passwordLogin: string){
     // PETICION POST
-    return this._httpClient.post(this.URL_LOGIN, credencialesIngreso)
+    return this._httpClient.post(this.URL_LOGIN, {emailLogin, passwordLogin})
   };
 
   // 2. Obtener el token
@@ -83,7 +83,7 @@ export class LoginService {
 
   // 6. Cierre de sesion
   logOut(){
-    this._toastrService.info('Cierre de sesion exitosa');
+    alert('Cierre de sesion exitosa');
 
     // Eliminar el token del local storage
     localStorage.removeItem('token');

@@ -13,7 +13,6 @@ import { UserService } from '../../services/user.service';
 import { Admin } from '../../interfaces/admin';
 import { User } from '../../interfaces/user';
 import { Login } from '../../interfaces/login';
-import { userInfo } from 'os';
 
 
 @Component({
