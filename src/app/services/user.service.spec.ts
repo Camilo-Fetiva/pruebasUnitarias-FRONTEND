@@ -13,7 +13,6 @@ describe(
   () => {
     let _service: UserService;
     let _httpMock: HttpTestingController;
-    let _userMock: User;
 
     const urlTest = 'http://localhost:3000/usuarios';
 
