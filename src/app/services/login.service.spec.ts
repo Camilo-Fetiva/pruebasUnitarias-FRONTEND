@@ -73,7 +73,7 @@ describe(
   )
 
   it(
-      'Peticion para verificar si el usuarios esta LOGED',
+      'Peticion para verificar si el usuario esta LOGED',
       ()=>{
           localStorage.setItem('token', tokenTest)
           expect(_loginService.isLoged()).toBeTruthy(); //VALIDACION DE RESPUESTA BOOLEANA TRUE
