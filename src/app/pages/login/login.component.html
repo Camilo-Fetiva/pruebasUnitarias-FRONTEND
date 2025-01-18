@@ -1,0 +1,51 @@
+<!-- PAG DE LOGIN DE USUARIO -->
+<!-- Traer el NAVBAR -->
+<app-nav-bar></app-nav-bar>
+
+    <!-- Aca esta dispuesto el formulario de acceso -->
+    <main>
+    <!-- BOOTSTRAP FORMS -->
+    <h1>Inicia Sesión en Ecocloset</h1>
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Email</label>
+        <input 
+        type="email" 
+        class="form-control" 
+        id="formGroupExampleInput" required
+        name="email"
+        [(ngModel)]="Correo"
+        >
+    </div>
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Contraseña</label>
+        <input 
+        type="password" 
+        class="form-control" 
+        id="formGroupExampleInput2" required
+        name="Contrasena"
+        [(ngModel)]="Contrasena"
+        >  
+    </div>
+
+    <!-- Fin del Bootstrap -->
+
+    <!-- Boton de registro -->
+    <button type="submit" class="btn btn-primary" (click)="iniciarSesion()">Iniciar sesión</button>
+
+    <!-- Opciones de acceso con redes -->
+    <h3>Siguenos en nuestras redes</h3>
+
+    <section class="redes">
+        <img src="assets\login\img-google.png" alt="Google">
+        <img src="assets\login\img-apple.png" alt="Apple">
+        <img src="assets\login\img-instagram2.png" alt="Instagram">
+        <img src="assets\login\img-facebook2.png" alt="Facebook">
+    </section>
+    
+    </main>
+    <!-- Final del formulario de registro -->
+
+<!-- Traer el FOOTER -->
+<app-footer></app-footer>

@@ -1,0 +1,107 @@
+/* Seccion del modal */
+.popup-container{
+    display: flex;
+    position: fixed;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    box-shadow: inset;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.popup{
+    background-color: var(--colorBlanco);
+    width: 90%;
+    margin: 5%;
+    border-radius: 24px;
+}
+
+.img-modal{
+    background-image: url(/assests/img-modalPc.png);
+    background-size: cover;
+    background-position: center;
+    height: 30%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+}
+
+.info-popup{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-popup h1{
+    color: var(--colorPrimario);
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.info-popup h3{
+    color: var(--colorPrimario);
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#correo2{
+    all: unset;
+    background-color: var(--colorBlanco);
+    padding: 8px;
+    color: var(--colorTexto);
+    border: 1px solid var(--colorTexto);
+}
+
+.info-popup button{
+    all: unset;
+    text-align: center;
+    background-color: var(--colorPrimario);
+    padding: 8px;
+    color: var(--colorBlanco);
+    font-weight: bolder;
+    border-radius: 8px;
+}
+
+.info-popup p{
+    color: var(--colorPrimario);
+    font-size: 16px;
+}
+
+/* Media screen para las medidas de tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    /* Modal */
+    .popup{
+        width: 70%;
+        margin: 15%;
+    }
+
+    .img-modal{
+        height: 40%;
+    }
+}
+
+/* Media screen para la medida de pc portatil */
+@media screen and (min-width: 1024px)and (max-width: 1919px){
+    /* Modal */
+    .popup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 60%;
+        margin: 10%;
+    }
+
+    .img-modal{
+        height: 100%;
+        border-radius: 24px 0px 0 24px;
+    }
+}

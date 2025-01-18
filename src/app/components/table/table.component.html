@@ -1,0 +1,16 @@
+<div *ngFor="let producto of allProducts" class="col">
+  <div *ngFor="let usuario of allUsers" class="col">
+    <!-- TABLA PRUEBA -->
+    <table class="table">
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>{{producto._id}}</td>
+            <td>{{usuario.Nombre}}</td>
+            <td>{{producto.Nombre}}</td>
+            <td>{{producto.Precio}}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>

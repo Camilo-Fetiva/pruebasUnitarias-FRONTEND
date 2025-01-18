@@ -1,0 +1,146 @@
+    <main>
+        <!-- Barra izquierda -->
+        <section class="admin-categorias">
+            <!-- CARD DE ADMIN -->
+            <div class="card2">
+                <img src="/assets/dashboard/home/img-admin.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div *ngFor="let admin of allAdmin" class="col">
+                        <h5 class="card-title"><strong>{{admin.Nombre}}</strong></h5>
+                    </div>
+                    <p class="card-text"><strong>Administrador(a)</strong></p>
+                </div>
+            </div>
+            <!-- ----------------------------------- -->
+
+            <section class="rutas">
+                <!-- BOTON BOOTSTRAP ACTIVE -->
+                <button type="button" class="btn btn-secondary">
+                    <img src="/assets/dashboard/home/img-icono-home.png" alt="icono">
+                    <a routerLink="/Dashboard">Dashboard</a></button>
+                <!-- ------------------------ -->
+
+                <!-- BOTON BOOTSTRAP DISABLE -->
+                <button type="button" class="btn btn-secondary">
+                    <img src="/assets/dashboard/home/img-icono-inventario.png" alt="icono">
+                    <a routerLink="/Dashboard/Inventario">Inventario</a></button>
+                <!-- ------------------------ -->
+
+                <!-- BOTON BOOTSTRAP DISABLE -->
+                <button type="button" class="btn btn-primary">
+                    <img src="/assets/dashboard/home/img-icono-users.png" alt="icono">
+                    Usuarios</button>
+                <!-- ------------------------ -->
+
+                <!-- BOTON BOOTSTRAP DISABLE -->
+                <button type="button" class="btn btn-secondary">
+                    <img src="/assets/dashboard/home/img-icono-ordenes.png" alt="icono">
+                    <a routerLink="/Dashboard/Ordenes">Ordenes</a></button>
+                <!-- ------------------------ -->
+            </section>
+
+            <section class="logo">
+                <img src="/assets/dashboard/home/img-ecocloset.png" alt="logo-ecocloset">
+            </section>
+
+            <!-- BOTON BOOTSTRAP SALIR -->
+            <button type="button" class="btn btn-danger">
+                <img src="/assets/dashboard/home/img-icono-salir.png" alt="icono">
+                <a routerLink="/">Salir</a></button>
+            <!-- ------------------------ -->
+        </section>
+
+        <!-- Dashboard Info -->
+        <section class="informacion">
+            <section class="titulo">
+                <img src="/assets/dashboard/home/img-icono-home2.png" alt="icono" height="50px">
+                <h1>Administrador de Usuarios</h1>
+            </section>
+
+            <h2>Los Usuarios con Mayores Compras:</h2>
+        <section class="row">
+            <div *ngFor="let usuario of allUsers.slice(0,3)" class="col">
+                <section class="productos-vendidos">
+                    <section class="orden-card">
+                        <img src="/assets/dashboard/home/img-user.png" alt="img-producto">
+                        <div class="orden-detalle">
+                            <h5><strong>Usuario: </strong>{{usuario.Nombre}}</h5>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+
+            <section class="boton-producto">
+                <h2>Lista de usuarios</h2>
+            </section>
+
+            <!-- FORMULARIO DE PETICIONES -->
+            <div class="container">
+                @if(showDiv){
+                <h3>Modificar Usuario</h3>
+                <form class="py-5 col-lg-6">
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" name="imagen" [(ngModel)]="correo" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputTelefono" class="form-label">Telefono</label>
+                        <input type="number" class="form-control" name="telefono" [(ngModel)]="telefono" />
+                    </div>
+
+                    <button (click)="modificarUsuario()" type="button"
+                        class="btn btn-secondary bg-my-color col-12">
+                        <h5>Modificar Usuario</h5>
+                    </button>
+                    <button (click)="toggleDiv()" type="button" class="btn btn-danger bg-my-color col-12 mt-3">
+                        Cerrar
+                    </button>
+                </form>
+                }
+            </div>
+
+            <!-- Tabla de BOOTSTRAP -->
+            <section class="tabla-inventario">
+                <table class="table">
+                    <thead class="table-dark">
+                        <th scope="col">Editar</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">ID</th>
+                    </thead>
+
+                    <!-- TABLA -->
+                    <tbody class="table-group-divider" id="miTabla">
+                        <!-- @for (producto of allProducts; track $index) -->
+                         
+                        <tr *ngFor="let usuario of allUsers">
+                                <td class="acciones" id="acciones">
+                                    <button type="button" class="btn btn-primary" (click)="identificarId(usuario._id)">
+                                        <img src="/assets/dashboard/home/img-icono-editar.png" alt="icono" width="30px">
+                                    </button>
+
+                                    <button type="button" class="btn btn-danger" (click)="borrarUsuario(usuario._id)">
+                                        <img src="/assets/dashboard/home/img-icono-eliminar.png" alt="icono" width="30px">
+                                    </button>
+                                </td>
+                                <td>{{usuario.Nombre}}</td>
+                                <td>{{usuario.Correo}}</td>
+                                <td>${{usuario.Telefono}}</td>
+                                <td>{{usuario.roleUser}}</td>
+                                <td>{{usuario._id}}</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <!-- <app-table-users></app-table-users> -->
+            </section>
+        </section>
+
+    </main>

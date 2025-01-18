@@ -1,0 +1,13 @@
+<!-- NgFor recorre elemento de un ARRAY y escoge el dato especifico-->
+<div *ngFor="let producto of allProducts.slice(0, 4)" class="col">
+
+
+
+    <section class="orden-card">
+        <img src={{producto.Imagen}} alt="img-producto">
+        <div class="orden-detalle">
+            <h4><strong>{{producto.Nombre}}</strong></h4>
+            <h5>{{producto.Precio}}</h5>
+        </div>
+    </section>
+

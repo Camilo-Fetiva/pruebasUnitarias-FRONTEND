@@ -1,0 +1,107 @@
+<main>
+    <!-- Barra izquierda -->
+    <section class="admin-categorias">
+        <!-- CARD DE ADMIN -->
+        <div class="card2">
+            <img src="/assets/dashboard/home/img-admin.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div *ngFor="let admin of allAdmin" class="col">
+                    <h5 class="card-title"><strong>{{admin.Nombre}}</strong></h5>
+                </div>
+                <p class="card-text"><strong>Administrador(a)</strong></p>
+            </div>
+        </div>
+        <!-- ----------------------------------- -->
+
+        <section class="rutas">
+            <!-- BOTON BOOTSTRAP ACTIVE -->
+            <button type="button" class="btn btn-secondary">
+                <img src="/assets/dashboard/home/img-icono-home.png" alt="icono">
+                <a routerLink="/Dashboard">Dashboard</a></button>
+            <!-- ------------------------ -->
+
+            <!-- BOTON BOOTSTRAP DISABLE -->
+            <button type="button" class="btn btn-secondary">
+                <img src="/assets/dashboard/home/img-icono-inventario.png" alt="icono">
+                <a routerLink="/Dashboard/Inventario">Inventario</a></button>
+            <!-- ------------------------ -->
+
+            <!-- BOTON BOOTSTRAP DISABLE -->
+            <button type="button" class="btn btn-secondary">
+                <img src="/assets/dashboard/home/img-icono-users.png" alt="icono">
+                <a routerLink="/Dashboard/Usuarios">Usuarios</a></button>
+            <!-- ------------------------ -->
+
+            <!-- BOTON BOOTSTRAP DISABLE -->
+            <button type="button" class="btn btn-primary">
+                <img src="/assets/dashboard/home/img-icono-ordenes.png" alt="icono">
+                Ordenes</button>
+            <!-- ------------------------ -->
+        </section>
+
+        <section class="logo">
+            <img src="/assets/dashboard/home/img-ecocloset.png" alt="logo-ecocloset">
+        </section>
+
+        <!-- BOTON BOOTSTRAP SALIR -->
+        <button type="button" class="btn btn-danger">
+            <img src="/assets/dashboard/home/img-icono-salir.png" alt="icono">
+            <a routerLink="/">Salir</a></button>
+        <!-- ------------------------ -->
+    </section>
+
+
+    <!-- Sección de Órdenes -->
+    <section class="informacion">
+        <section class="titulo">
+            <img src="/assets/dashboard/home/img-icono-home2.png" alt="icono" height="50px">
+            <h1>Ordenes</h1>
+        </section>
+
+        <h2>Últimas órdenes</h2>
+        <!-- NgFor recorre elemento de un ARRAY y escoge el dato especifico-->
+        <section class="row">
+            <div *ngFor="let producto of allProducts.slice(0,3)" class="col">
+
+                <section class="ultimas-ordenes">
+                    <section class="orden-card">
+                        <img src={{producto.Imagen}} alt="img-producto">
+                        <div class="orden-detalle">
+                            <p><strong>#Orden: </strong>{{producto._id}}</p>
+                            <div *ngFor="let usuario of allUsers.slice(0,1)" class="col">
+                                <p><strong>Usuario: </strong>{{usuario.Nombre}}</p>
+                            </div>
+                            <p><strong>Productos: </strong>{{producto.Nombre}}</p>
+                            <p><strong>Precio: </strong>{{producto.Precio}}</p>
+                        </div>
+                    </section>
+                </section>
+            </div>
+
+        </section>
+
+
+        <h2>Lista de órdenes</h2>
+        <section class="tabla-ordenes">
+            <table class="table">
+                <thead class="table-dark">
+                    <th scope="col"># Orden</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                </thead>
+
+                <tbody class="table-group-divider" id="miTabla">
+                    <tr *ngFor="let producto of allProducts.slice(0,10)" class="col">
+                        <td>{{producto._id}}</td>
+                        <td *ngFor="let usuario of allUsers.slice(0,1)" class="col">{{usuario.Nombre}}</td>
+                        <td>{{producto.Nombre}}</td>
+                        <td>{{producto.Precio}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </section>
+</main>

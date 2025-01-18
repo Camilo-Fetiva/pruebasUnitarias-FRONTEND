@@ -1,0 +1,53 @@
+/* Aca empieza el footer */
+footer{
+    background-color: var(--colorPrimario);
+    padding: 32px;
+    color: var(--colorBlanco);
+}
+
+footer h3{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+footer button{
+    all: unset;
+    font-size: 24px;
+    background-color:var(--colorSecundario);
+    color: var(--colorBlanco);
+    font-weight: bolder;
+    padding: 8px;
+    border-radius:8px ;
+    margin: 16px 0px;
+}
+
+#correo{
+    all: unset;
+    background-color: var(--colorBlanco);
+    width: 90%;
+    padding: 8px;
+    color: var(--colorTexto);
+    margin-top: 8px;
+}
+
+.redes-footer{
+    text-align: center;
+}
+
+.redes-footer img{
+    padding: 16px;
+}
+
+/* Media screen para la medida de pc portatil */
+@media screen and (min-width: 1024px)and (max-width: 1919px){
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .redes-footer{
+        display: flex;
+    }
+}

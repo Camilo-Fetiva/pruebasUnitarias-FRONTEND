@@ -1,0 +1,193 @@
+*{
+    overflow-x: hidden;
+}
+
+
+main{
+    display: flex;
+}
+
+.admin-categorias{
+    background-color: var(--colorPrimario);
+    height: 100;
+    padding: 16px;
+}
+
+.card2{
+    text-align: center;
+    padding: 16px;
+    color: var(--colorBlanco);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card2 h5{
+    color: var(--colorBlanco);
+}
+
+.btn-primary{
+    border: none;
+    background-color: var(--colorSecundario);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-secondary{
+    border: none;
+    background-color: var(--colorPrimario);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+a:link, :visited, :hover, :active{
+    text-decoration: none;
+    color: var(--colorTexto);
+}
+
+
+.admin-texto{
+    text-align: center;
+    color: var(--colorBlanco);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.rutas{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+
+.logo{
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-danger{
+    border: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.informacion{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 24px;
+    color: rgb(0, 23, 58);
+}
+
+.titulo h1{
+    font-weight: bolder;
+}
+
+.categorias-admin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3%;
+}
+
+
+.card-title{
+    color: var(--colorSecundario);
+    font-weight: bolder;
+}
+
+.cifras-admin{
+    display: flex;
+    gap: 24px;
+}
+
+.cifras-totales{
+    background-color: var(--colorSecundario);
+    padding: 16px;
+    border-radius: 16px;
+    margin: 16px 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.cifras-totales h1{
+    color: var(--colorBlanco);
+    font-weight: bolder;
+}
+
+.cifras-totales h3{
+    color: var(--colorBlanco);
+}
+
+.boton-cifras{
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    padding: 8px;
+    color: var(--colorBlanco);
+}
+
+.boton-cifras h4{
+    font-weight: bolder;
+    margin-left: 16px;
+}
+
+.cifras-destacadas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 50%;
+    margin: 16px 0;
+}
+
+.card-cifras{
+    background-color: rgb(226, 223, 223);
+    padding: 12px;
+    width: 100%;
+    color: var(--colorSecundario);
+    border-radius: 8px;
+}
+
+.boton-numero{
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    background-color: var(--colorPrimario);
+    padding: 4px;
+    border-radius: 8px;
+    gap: 16px;
+    color: var(--colorBlanco);
+    text-decoration: none;
+}
+
+.card-cifras h5{
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.card-cifras h4{
+    font-weight: bolder;
+}

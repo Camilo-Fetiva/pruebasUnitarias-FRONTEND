@@ -1,0 +1,33 @@
+<!-- NgFor recorre elemento de un ARRAY y escoge el dato especifico-->
+<div *ngFor="let producto of allProducts" class="col">
+
+  <!-- CARD DE PRODUCTO -->
+  <div class="row">
+    <section class="card-product">
+      <section class="cover-img">
+        <img src={{producto.Imagen}} alt="producto" object-fit="cover-img">
+      </section>
+
+      <section class="producto-texto">
+        <h2>{{producto.Nombre}}</h2>
+        <h3>{{producto.Coleccion}}</h3>
+        <h4>{{producto.Precio}}</h4>
+        <a routerLink="/Productos" style="text-decoration: none">
+          <button id="abrir-modal" (click)="handleClick2(producto._id)">Ver producto</button>
+        </a>
+      </section>
+    </section>
+  </div>
+
+  <!-- MODAL -->
+  <div *ngIf="showModal" class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2>{{selectedProducto?.Nombre}}</h2>
+      <h3>{{selectedProducto?.Coleccion}}</h3>
+      <img [src]="selectedProducto?.Imagen" alt="Imagen del producto" />
+      <h5>{{selectedProducto.Descripcion}}</h5>
+      <h4>{{selectedProducto.Precio}}</h4>
+      <button (click)="closeModal()">Cerrar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<!-- Esta seccion es el header que contiene el navbar -->
+<header>
+    <!-- PRUEBA NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+        <img src="assets/nav-bar/img-logo.png" alt="logo-Ecocloset" width="">
+          <a class="navbar-brand" routerLink="/"><strong></strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/Acerca">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/ListaProductos">Productos</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <a routerLink="/Login"><button class="btn btn-success" id="btn" type="submit">Ingresar</button></a>
+              <a routerLink="/Ingresar"><button class="btn btn-light" type="submit">Registrarse</button></a>
+            </form>
+          </div>
+        </div>
+      </nav>
+</header>
+
+<!-- Etiqueta para el funcionamiento de Angular -->
+<router-outlet />

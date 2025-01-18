@@ -1,0 +1,73 @@
+/* Aca empieza el header */
+/* Aca va el navbar */
+header{
+    display: flex;
+    margin: auto;
+    padding: 8px;
+    margin: 8px;
+}
+
+.navbar{
+    background-color: var(--colorBlanco);
+    border-radius: 24px;
+    width: 100%;
+    padding: 16px;
+}
+
+.navbar-toggler{
+    background-color: var(--colorPrimario);
+}
+
+#btn{
+    background-color: var(--colorPrimario);
+    color: var(--colorBlanco);
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 8px;
+    margin-left: 8px;
+}
+
+header img{
+    width: 20%;
+    height: 20%;
+    margin: 8px 40px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    background-color: var(--colorBlanco);
+    padding: 8px;
+    border-radius: 8px;
+    color: var(--colorBlanco);
+}
+
+.search img{
+    width: 50%;
+    height: 50%;
+    margin: 8px;
+}
+/* Aca finaliza el navbar */
+
+/* Media screen para las medidas de tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    /* Seccion de navbar */
+    .navbar{
+        width: 100%;
+    }
+
+    .navbar a{
+        font-size: 24px;
+    }
+}
+
+/* Media screen para la medida de pc portatil */
+@media screen and (min-width: 1024px)and (max-width: 1919px){
+    /* Ajustes de la navbar */
+    .navbar{
+        width: 100%;
+        font-size: 20px;
+    }
+}

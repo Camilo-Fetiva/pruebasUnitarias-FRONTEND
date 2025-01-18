@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --colorPrimario: #0E6C64;
+    --colorSecundario: #5F5566;
+    --colorTexto: #333333;
+    --colorBlanco: #EEEFEF;
+    --tipography:"Montserrat", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}

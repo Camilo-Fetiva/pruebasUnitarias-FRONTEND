@@ -1,0 +1,13 @@
+.titulo h1{
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--colorSecundario);
+    margin: 60px;
+}
+
+.tarjeta{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    margin: 60px;
+    gap: 60px;
+}

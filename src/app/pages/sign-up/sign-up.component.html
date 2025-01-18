@@ -1,0 +1,69 @@
+<!-- PAG DE SING-UP DE USUARIO -->
+<!-- Traer el NAVBAR -->
+<app-nav-bar></app-nav-bar>
+ 
+    <!-- Aca esta dispuesto el formulario de acceso -->
+    <main>
+    <!-- BOOTSTRAP FORMS -->
+    <h1>Regístrate en Ecocloset</h1>
+    <form action="">
+        <div class="row">
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                id="formGroupExampleInput" required
+                name="Nombre"
+                [(ngModel)]="Nombre">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Email</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            id="formGroupExampleInput" required
+            name="Correo"
+            [(ngModel)]="Correo">
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Teléfono</label>
+            <input 
+            type="number" 
+            class="form-control" 
+            id="formGroupExampleInput2" required
+            name="Telefono"
+            [(ngModel)]="Telefono">  
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Contraseña</label>
+            <input 
+            type="password" 
+            class="form-control" 
+            id="formGroupExampleInput2" required
+            name="Contrasena"
+            [(ngModel)]="Contrasena">  
+        </div>
+    </form>
+    <!-- Fin del Bootstrap -->
+
+    <!-- Boton de registro -->
+    <button class="btn-login" type="submit" (click)="crearUsuarios()">Registrarse</button>
+
+    <!-- Opciones de acceso con redes -->
+    <h3>Siguenos en nuestras redes</h3>
+
+    <section class="redes">
+        <img src="assets\login\img-google.png" alt="Google">
+        <img src="assets\login\img-apple.png" alt="Apple">
+        <img src="assets\login\img-instagram2.png" alt="Instagram">
+        <img src="assets\login\img-facebook2.png" alt="Facebook">
+    </section>
+    
+    </main>
+    <!-- Final del formulario de registro -->
+
+<!-- Traer el FOOTER -->
+<app-footer></app-footer>

@@ -1,0 +1,38 @@
+/* Esta seccion es del formulario */
+main{
+    margin: 5%;
+    background-color: var(--colorBlanco);
+    padding: 5%;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.row{
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.mb-3{
+    text-align: left;
+}
+
+.btn-login{
+    all: unset;
+    background-color: var(--colorPrimario);
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: var(--colorBlanco);
+    font-weight: bolder;
+    margin: 16px;
+}
+
+main h1{
+    color: var(--colorPrimario);
+    font-weight: bolder;
+    text-align: left;
+}
+
+.form-check-label{
+    text-align: left;
+    font-size: 14px;
+}

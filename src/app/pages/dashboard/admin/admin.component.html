@@ -1,0 +1,172 @@
+<!-- NgFor recorre elemento de un ARRAY y escoge el dato especifico-->
+<!-- <div *ngFor="let admin of allAdmin" class="col">  -->
+
+<main>
+
+    <!-- Barra izquierda -->
+    <section class="admin-categorias">
+        <!-- CARD DE ADMIN -->
+        <div class="card2">
+            <img src="/assets/dashboard/home/img-admin.png" alt="icono" width="150px">
+            <div class="card-body">
+                <div *ngFor="let admin of allAdmin" class="col">
+                    <h5 class="card-title"><strong>{{admin.Nombre}}</strong></h5>
+                </div>
+                <p class="card-text"><strong>Administrador(a)</strong></p>
+            </div>
+        </div>
+        <!-- ----------------------------------- -->
+
+        <section class="rutas">
+            <!-- BOTON BOOTSTRAP ACTIVE -->
+            <button type="button" class="btn btn-primary">
+                <img src="/assets/dashboard/home/img-icono-home.png" alt="icono">
+                Dashboard</button>
+            <!-- ------------------------ -->
+
+            <!-- BOTON BOOTSTRAP DISABLE -->
+            <button type="button" class="btn btn-secondary">
+                <img src="/assets/dashboard/home/img-icono-inventario.png" alt="icono">
+                <a routerLink="/Dashboard/Inventario">Inventario</a></button>
+            <!-- ------------------------ -->
+
+            <!-- BOTON BOOTSTRAP DISABLE -->
+            <button type="button" class="btn btn-secondary">
+                <img src="/assets/dashboard/home/img-icono-users.png" alt="icono">
+                <a routerLink="/Dashboard/Usuarios">Usuarios</a></button>
+            <!-- ------------------------ -->
+
+            <!-- BOTON BOOTSTRAP DISABLE -->
+            <button type="button" class="btn btn-secondary">
+                <img src="/assets/dashboard/home/img-icono-ordenes.png" alt="icono">
+                <a routerLink="/Dashboard/Ordenes">Ordenes</a></button>
+            <!-- ------------------------ -->
+        </section>
+
+        <section class="logo">
+            <img src="/assets/dashboard/home/img-ecocloset.png" alt="logo-ecocloset">
+        </section>
+
+        <!-- BOTON BOOTSTRAP SALIR -->
+        <button type="button" class="btn btn-danger">
+            <img src="/assets/dashboard/home/img-icono-salir.png" alt="icono">
+            <a routerLink="/">Salir</a></button>
+        <!-- ------------------------ -->
+    </section>
+
+
+    <section class="informacion">
+        <section class="titulo">
+            <img src="/assets/dashboard/home/img-icono-home2.png" alt="icono" height="50px">
+            <h1>Dashboard</h1>
+        </section>
+
+
+        <section class="categorias-admin">
+
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/dashboard/home/img-ordenes.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Ordenes</h2>
+                    <button type="button" class="btn btn-primary">
+                        <img src="/assets/dashboard/home/img-icono-config.png" alt="icono">
+                        <a routerLink="/Dashboard/Ordenes">Ver Ordenes</a></button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/dashboard/home/img-inventario.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Inventario</h2>
+                    <button type="button" class="btn btn-primary">
+                        <img src="/assets/dashboard/home/img-icono-config.png" alt="icono">
+                        <a routerLink="/Dashboard/Inventario">Ver Inventario</a></button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/dashboard/home/img-users.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Usuarios</h2>
+                    <button type="button" class="btn btn-primary">
+                        <img src="/assets/dashboard/home/img-icono-config.png" alt="icono">
+                        <a routerLink="/Dashboard/Usuarios">Ver Usuarios</a></button>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="cifras-admin">
+            <section class="cifras-totales">
+
+                <h1>Ventas totales</h1>
+                <section class="boton-cifras">
+                    <button type="button" class="btn btn-primary">
+                        <img src="/assets/dashboard/home/img-icono-inventario.png" alt="icono">
+                        <h4>0</h4>
+                    </button>
+                </section>
+
+                <h3>Productos Vendidos</h3>
+                <section class="boton-cifras">
+                    <button type="button" class="btn btn-primary">
+                        <img src="/assets/dashboard/home/img-icono-ordenes.png" alt="icono">
+                        <h4>10</h4>
+                    </button>
+                </section>
+
+                <h3>Clientes Totales</h3>
+                <section class="boton-cifras">
+                    <button type="button" class="btn btn-primary">
+                        <img src="/assets/dashboard/home/img-icono-carrito.png" alt="icono">
+                        <h4>10</h4>
+                    </button>
+                </section>
+            </section>
+
+            <section class="cifras-destacadas">
+
+                <section class="card-cifras">
+                    <h4>Total de productos</h4>
+                    <section class="boton-numero">
+                        <button type="button" class="btn btn-secondary">
+                            <img src="/assets/dashboard/home/img-icono-carrito.png" alt="icono">
+                            <h4>21</h4>
+                        </button>
+                    </section>
+                </section>
+
+                <section class="card-cifras">
+                    <h4>Total de categorías</h4>
+                    <section class="boton-numero">
+                        <button type="button" class="btn btn-secondary">
+                            <img src="/assets/dashboard/home/img-icono-carrito.png" alt="icono">
+                            <h4>4</h4>
+                        </button>
+                    </section>
+                </section>
+
+                <section class="card-cifras">
+                    <h4>Total de usuarios</h4>
+                    <section class="boton-numero">
+                        <button type="button" class="btn btn-secondary">
+                            <img src="/assets/dashboard/home/img-icono-carrito.png" alt="icono">
+                            <h4>10</h4>
+                        </button>
+                    </section>
+                </section>
+
+                <section class="card-cifras">
+                    <h4>Total de ordenes</h4>
+                    <section class="boton-numero">
+                        <button type="button" class="btn btn-secondary">
+                            <img src="/assets/dashboard/home/img-icono-carrito.png" alt="icono">
+                            <h4>0</h4>
+                        </button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</main>

@@ -1,0 +1,501 @@
+
+/* Intro Section */
+.intro {
+    background-color: var(--colorSecundario);
+    /* Color morado oscuro */
+    padding: 50px 20px;
+    /* border-radius: 10px; */
+    color: var(--colorBlanco);
+    /* border: solid red; */
+    width: 100%;
+}
+
+.intro-content {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    width: 100%;
+    /* border: solid red; */
+    gap: 32px;
+}
+
+.text h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.text p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    /* align-content: center; */
+}
+
+.buttons button {
+    background-color: var(--colorPrimario);
+    color: var(--colorBlanco);
+    border: none;
+    padding: 20px 50px;
+    /* Botones más grandes */
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: var(--colorPrimario);
+}
+
+.image img {
+    height: auto;
+    border-radius: 10px;
+    width: 100%;
+    /* border: solid red; */
+}
+
+.color-bar {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.color-bar span {
+    display: inline-block;
+    width: 100px;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.bar-color-1 {
+    background-color: var(--colorPrimario);
+}
+
+.bar-color-2 {
+    background-color: #AB4E68;
+}
+
+.bar-color-3 {
+    background-color: #B07156;
+}
+
+.bar-color-4 {
+    background-color: #A9C2D7;
+}
+
+.bar-color-5 {
+    background-color: #F7F0F5;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    gap: 20px;
+    /* Espacio entre las tarjetas */
+}
+
+.features .feature {
+    background-color: var(--colorBlanco);
+    padding: 30px;
+    border-radius: 15px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.features .feature:hover {
+    transform: translateY(-10px);
+}
+
+.features .image {
+    margin-bottom: 15px;
+}
+
+.features .image img {
+    max-width: 100%;
+    /* Imagen ocupa el 100% del contenedor */
+    height: auto;
+    border-radius: 10px;
+    /* Bordes redondeados para imagenes */
+    object-fit: cover;
+    height: 60%;
+}
+
+.features h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--colorTexto);
+    font-weight: 900;
+}
+
+.features p {
+    font-size: 18px;
+    color: var(--colorTexto);
+}
+
+/* Call to Action Section */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    /* background-color: var(--colorBlanco); */
+    font-weight: 900;
+}
+
+.cta h2 {
+    font-size: 70px;
+    margin-bottom: 40px;
+    color: var(--colorSecundario);
+    font-weight: bolder;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cta-item {
+    width: 30%;
+    /* Ancho de las secciones de texto */
+    text-align: center;
+}
+
+.cta-item h3 {
+    font-size: 50px;
+    color: var(--colorPrimario);
+    /* Color del texto "Comprar" y "Vender" */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.cta-item p {
+    font-size: 20px;
+    color: var(--colorTexto);
+}
+
+.cta-image {
+    width: 30%;
+    /* Ancho de la imagen */
+    text-align: center;
+}
+
+.cta-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.cta-item p {
+    padding: 0 20px;
+}
+
+/* Carbon Footprint Section */
+.carbon-footprint {
+    text-align: center;
+    background-image: url(/assets/about-us/img-aboutBanner.png);
+    height: 600px;
+    background-size: cover;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carbon-content {
+    position: relative;
+}
+
+.carbon-content h2 {
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--colorBlanco);
+}
+
+
+/* mediaQuerie de Celular */
+@media screen and (max-width: 767px) {
+   
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro-content {
+        padding: 10px;
+    }
+
+    .text {
+        flex-direction: column;
+    }
+
+    .image {
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .color-bar {
+        flex-direction: row;
+    }
+
+    .bar-color-1,
+    .bar-color-2,
+    .bar-color-3,
+    .bar-color-4,
+    .bar-color-5 {
+        width: 100%;
+        height: 5px;
+        margin-bottom: 5px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features .feature {
+        width: 85%;
+    }
+
+    .feature {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .feature h3 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .feature p {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .cta {
+        text-align: center;
+    }
+
+    .cta h3{
+        font-size: 32px;
+    }
+
+    .cta h2{
+        font-size: 40px;
+    }
+
+    .cta-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cta-image {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .carbon-footprint {
+        /* background-size: cover; */
+        background-position: center;
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carbon-content {
+        text-align: center;
+    }
+
+    .carbon-content h2 {
+        font-size: 32px;
+        justify-content: center;
+        align-content: center;
+        font-weight: 600;
+    }
+
+}
+
+/* mediaQuerie de Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .text-principal {
+        text-align: center;
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .btn-verificaciones,
+    .btn-compradores,
+    .btn-vendedores {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .color-bar {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: solid red; */
+    }
+
+    .features .feature {
+        width: 85%;
+    }
+
+    .feature {
+        width: 100vw;
+        margin-bottom: 20px;
+        /* border: solid red; */
+    }
+
+    .feature .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .feature h3 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .feature p {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    .cta-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-item {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .cta-image {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cta-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .carbon-footprint {
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        width: 100%;
+        /* Ajusta según sea necesario */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carbon-content {
+        text-align: center;
+    }
+
+    .carbon-content h2 {
+        font-size: 48px;
+        justify-content: center;
+        align-content: center;
+        font-weight: 600;
+    }
+}

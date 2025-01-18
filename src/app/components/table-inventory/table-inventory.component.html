@@ -1,0 +1,25 @@
+<div *ngFor="let producto of allProducts" class="col">
+
+<table class="table">
+    <thead>
+      <!-- <tr>
+        <th scope="col"># Orden</th>
+        <th scope="col">ID</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Precio</th>
+      </tr> -->
+    </thead>
+    <tbody>
+      <tr>
+        <td><button type="button" class="btn btn-primary">
+            <img src="/assets/dashboard/home/img-icono-editar.png" alt="icono"></button></td>
+        <td><strong>{{producto.Nombre}}</strong></td>
+        <td>{{producto.Imagen}}</td>
+        <td>{{producto.Coleccion}}</td>
+        <td>{{producto.Precio}}</td>
+        <td>{{producto.Descripcion}}</td>
+        <td>{{producto._id}}</td>
+      </tr>
+    </tbody>
+</table>

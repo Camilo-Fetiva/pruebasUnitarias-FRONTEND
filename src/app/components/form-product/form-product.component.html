@@ -1,0 +1,61 @@
+<p>form-product works!</p>
+
+<!-- FORM DE PRODUCTO -->
+
+<body>
+    
+    <!-- Aca esta dispuesto el formulario del producto -->
+    <main>
+    <!-- BOOTSTRAP FORMS -->
+    <h1>Información del producto</h1>
+    <div class="row">
+        <div class="col">
+            <label for="formGroupExampleInput" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" required>
+        </div>
+    </div>
+
+    <!-- Subir imagen -->
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Imagen</label>
+        <input class="form-control" type="file" id="formFile">
+    </div>
+
+    <!-- Seleccionar coleccion -->
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Colección</option>
+        <option value="Invierno">Invierno</option>
+        <option value="Primavera">Primavera</option>
+        <option value="Verano">Verano</option>
+        <option value="Otoño">Otoño</option>
+    </select>
+
+    <!-- Seleccionar tallas -->
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Tallas</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+    </select>
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Precio</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" required>
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Descripción</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" required>  
+    </div>
+    <!-- Fin del Bootstrap -->
+
+    <!-- Boton de ELIMINAR -->
+    <a style="text-decoration: none"><button class="btn-login" type="submit" onclick="nombreUser()">Eliminar</button></a>
+
+    <!-- Boton de GUARDAR -->
+    <a style="text-decoration: none"><button class="btn-login" type="submit" onclick="nombreUser()">Guardar</button></a>
+
+    </main>
+    <!-- Final del formulario de PRODUCTO -->
+
+</body>

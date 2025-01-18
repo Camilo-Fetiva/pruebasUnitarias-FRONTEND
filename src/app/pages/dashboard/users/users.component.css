@@ -1,0 +1,180 @@
+
+main{
+    display: flex;
+}
+
+.admin-categorias{
+    background-color: var(--colorPrimario);
+    height: 400;
+    padding: 16px;
+}
+
+.card2{
+    text-align: center;
+    padding: 16px;
+    color: var(--colorBlanco);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card2 h5{
+    color: var(--colorBlanco);
+}
+
+.btn-primary{
+    border: none;
+    background-color: var(--colorSecundario);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-secondary{
+    border: none;
+    background-color: var(--colorPrimario);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+a:link, :visited, :hover, :active{
+    text-decoration: none;
+    color: var(--colorTexto);
+}
+
+
+.admin-texto{
+    text-align: center;
+    color: var(--colorBlanco);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.rutas{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.logo{
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-danger{
+    border: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.informacion{
+    flex: 1;
+    padding: 24px;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 40px;
+    color: rgb(0, 23, 58);
+}
+
+.titulo h1{
+    font-weight: bolder;
+}
+
+.productos-vendidos{
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+    width: auto;
+    gap: 16px;
+}
+
+.orden-card {
+    background-color: var(--colorBlanco);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 8px;
+}
+
+.orden-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.orden-detalle p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.boton-producto{
+    display: flex;
+    gap: 16px;
+    margin: 32px 0;
+    align-items: start;
+}
+
+.table{
+    background-color: var(--colorPrimario);
+    table-layout: fixed; /* Hace que todas las celdas tengan el mismo tamaño */
+    width: 100%; /* Asegura que la tabla ocupe el 100% del ancho disponible */
+}
+
+.table th{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    word-wrap: break-word;
+    padding: 4px;
+    border: var(--colorBlanco)
+}
+
+.table td {
+    background-color: var(--colorBlanco);
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    word-wrap: break-word;
+    padding: 4px;
+    border: solid rgb(241, 241, 241);
+}
+
+.py-5{
+    color: var(--colorTexto);
+    width: 100%;
+    background-color: rgb(233, 232, 232);
+    padding: 24px;
+    margin: 16px 0;
+    border-radius: 8px;
+}
+
+#miTabla img{
+    max-width: 100%;
+    max-height: 200%;
+    object-fit: cover;
+}
+
+#acciones button{
+    margin: 8px;
+    width: 80px;
+}

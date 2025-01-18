@@ -1,0 +1,434 @@
+*{
+overflow-x: hidden;
+}
+
+/* Aca empieza el main */
+/* Esta seccion es del hero */
+.hero{
+    background-image: url(/assets/Home/img-banner.png);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 80px;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.info-hero{
+    margin: 16px;
+}
+
+.info-hero h1{
+    font-size: 48px;
+    color: var(--colorBlanco);
+}
+
+.info-hero p{
+    font-size: 16px;
+    color: var(--colorBlanco);
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.info-hero button{
+    all: unset;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: var(--colorPrimario);
+    color: var(--colorBlanco);
+    padding: 16px 32px;
+    border-radius: 8px;
+}
+
+/* Seccion del modal */
+.popup-container{
+    display: flex;
+    position: fixed;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    box-shadow: inset;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.popup{
+    background-color: var(--colorBlanco);
+    width: 90%;
+    margin: 5%;
+    border-radius: 24px;
+}
+
+.img-modal{
+    background-image: url(/assests/img-modalPc.png);
+    background-size: cover;
+    background-position: center;
+    height: 30%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+}
+
+.info-popup{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-popup h1{
+    color: var(--colorPrimario);
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.info-popup h3{
+    color: var(--colorPrimario);
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#correo2{
+    all: unset;
+    background-color: var(--colorBlanco);
+    padding: 8px;
+    color: var(--colorTexto);
+    border: 1px solid var(--colorTexto);
+}
+
+.info-popup button{
+    all: unset;
+    text-align: center;
+    background-color: var(--colorPrimario);
+    padding: 8px;
+    color: var(--colorTexto);
+    font-weight: bolder;
+    border-radius: 8px;
+}
+
+.info-popup p{
+    color: var(--colorPrimario);
+    font-size: 16px;
+}
+
+/* Esta es la seccion de disenadores */
+.designers{
+    margin: 16px;
+    text-align: center;
+}
+
+
+
+.designers h1{
+    font-size: 48px;
+    color: var(--colorSecundario);
+}
+
+.designers p{
+    font-size: 16px;
+    font-weight: bolder;
+    color: var(--colorTexto);
+    margin: 8px 0;
+}
+
+.designers img{
+    width: 90%;
+}
+
+
+/* Aca van los cuadros de color */
+.divisor-color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.cuadrado1{
+    width: 45px;
+    height: 10px;
+    background-color: #0E6C64;
+}
+
+.cuadrado2{
+    width: 45px;
+    height: 10px;
+    background-color: #5F5566;
+   
+}
+
+.cuadrado3{
+    width: 45px;
+    height: 10px;
+    background-color: #AB4E68;
+    
+}
+
+.cuadrado4{
+    width: 45px;
+    height: 10px;
+    background-color: #B07156;
+    
+}
+
+.cuadrado5{
+    width: 45px;
+    height: 10px;
+    background-color: #B4D2E7;
+    
+}
+
+.cuadrado6{
+    width: 45px;
+    height: 10px;
+    background-color: #F7F0F5;
+    
+}
+
+.categorias{
+    margin-top: 120px;
+}
+
+/* Esta es la seccion de las categorias */
+#carouselExampleCaptions{
+    margin: 24px;
+    height: 25%;
+    margin-bottom: 120px;
+    
+}
+
+#carouselExampleCaptions h5{
+    background-color: var(--colorPrimario);
+    color: var(--colorBlanco);
+    font-size: 24px;
+    font-weight: bolder;
+    border-radius: 8px;
+    padding: 8px;
+    margin: auto;
+}
+
+.categorias h1{
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--colorSecundario);
+    margin: 16px;
+    text-align: center;
+}
+
+/* Esta es la seccion de los productos destacados */
+.products{
+    margin: 16px;
+}
+
+.products h1{
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--colorSecundario);
+    text-align: center;
+}
+
+.img-pro1{
+    background-image: url(/assets/Home/img-producto1.png);
+    background-size: cover;
+    background-position: center;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+}
+
+.info-products{
+    margin-top:400px;
+}
+
+.info-products h1{
+    text-align: left;
+    font-size: 48px;
+    color: var(--colorBlanco);
+}
+
+.info-products button{
+    all: unset;
+    font-size: 24px;
+    background-color:var(--colorPrimario);
+    color: var(--colorBlanco);
+    font-weight: bolder;
+    padding: 8px;
+    border-radius:8px ;
+}
+
+.img-pro2{
+    background-image: url(/assets/Home/img-producto2.png);
+    background-size: cover;
+    background-position: center;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+}
+
+.img-pro3{
+    background-image: url(/assets/Home/img-producto3.png);
+    background-size: cover;
+    background-position: center;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+}
+
+/* Seccion de favoritos */
+.favorites{
+    margin: 16px;
+}
+
+.favorites h1{
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--colorSecundario);
+    text-align: center;
+}
+
+.nuevos h1{
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--colorSecundario);
+    text-align: center;
+}
+
+/* Seccion de lista de productos */
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    margin: 32px;
+    gap: 32px;
+}
+
+
+/* Media screen para las medidas de tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    /* Seccion de banner */
+    .hero{
+        height: 40vh;
+    }
+
+    .info-hero{
+        margin-top: 15%;
+        width: 80%;
+    }
+
+    /* Modal */
+    .popup{
+        width: 70%;
+        margin: 15%;
+    }
+
+    .img-modal{
+        height: 40%;
+    }
+
+    /* Seccion de disenadores */
+    .designers{
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .designers img{
+        width: 50%;
+    }
+
+    /* Seccion de carousel */
+    #carouselExampleCaptions{
+        margin: 24px;
+        height: 40vh;
+    }
+
+    #carouselExampleCaptions h5{
+        margin: 32px auto;
+    }
+
+    .tarjeta{
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; 
+    }
+
+    
+}
+
+/* Media screen para la medida de pc portatil */
+@media screen and (min-width: 1024px)and (max-width: 1919px){
+
+    /* Ajustes al banner */
+    .hero{
+        height: 60vh;
+    }
+    .info-hero{
+        margin-top: 10%;
+        width: 70%;
+    }
+
+    .info-hero h1{
+        font-size: 60px;
+    }
+
+    .info-hero p{
+        font-size: 24px;
+    }
+
+    /* Modal */
+    .popup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 60%;
+        margin: 10%;
+    }
+
+    .img-modal{
+        height: 100%;
+        border-radius: 24px 0px 0 24px;
+    }
+
+    /* Seccion de disenadores */
+    .designers{
+        display: flex;
+        text-align: left;
+    }
+
+    .designers img{
+        margin-right: 24px;
+        width: 250%;
+    }
+
+    /* Seccion de Categorias */
+    .galeria{
+        display: flex;
+        gap: 16px;
+    }
+
+    .img-pro1{
+        width: 50%;
+        display: flex;
+        justify-content: start;
+        align-items: end;
+    }
+
+    .galery-products2{
+        width: 60%;
+    }
+
+    /* Seccion de lista de productos */
+    .tarjeta{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        margin: 32px;
+        gap: 40px;
+    }
+}

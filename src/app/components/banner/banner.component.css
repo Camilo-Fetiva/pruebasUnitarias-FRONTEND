@@ -1,0 +1,35 @@
+/* Esta seccion es del hero */
+.hero{
+    background-image: url(/assets/Home/img-banner.png); /*LA IMAGEN DEBE PODER REEMPLAZARSE*/
+    background-size: cover;
+    background-position: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.info-hero{
+    margin: 16px;
+}
+
+.info-hero h1{
+    font-size: 48px;
+    color: var(--colorBlanco);
+}
+
+.info-hero p{
+    font-size: 16px;
+    color: var(--colorBlanco);
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.info-hero button{
+    all: unset;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: var(--colorPrimario);
+    color: var(--colorBlanco);
+    padding: 16px 32px;
+    border-radius: 8px;
+}
