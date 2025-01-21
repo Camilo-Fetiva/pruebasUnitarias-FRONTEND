@@ -4,6 +4,8 @@ import { TestBed } from '@angular/core/testing'; //CONFIGURAR EL ENTORNO DE PRUE
 import { LoginService } from './login.service';
 
 
+
+
 // IMPORTAR EL PROVEEDOR PARA PETICIONES HTTP 
 import { provideHttpClient } from '@angular/common/http';
 
@@ -16,9 +18,13 @@ describe(
     let _loginService: LoginService;
     let _httpMock: HttpTestingController; //SIMULA INTERACCIONES HTTP
     const urlTest = "http://localhost:3000/login";
+
+    const nameTest = 'Joe Burrow'
     const emailTest = 'burrow@user';
     const passwordTest = '123';
     const tokenTest = 'sdkjhfshkfjg';
+    const phoneTest = 1234567;
+    
 
     // CONFIGURACION GLOBAL
     beforeEach(() => {
@@ -90,6 +96,20 @@ describe(
         spyOn(window, 'alert'); //SIMULAR EL ALERT
         _loginService.logOut();
         expect(window.alert).toHaveBeenCalledWith('Cierre de sesion exitosa');
+      }
+    )
+
+    it(
+      'Peticion de si es ADMIN',
+      ()=>{
+        // SIMULAR EL TOKEN DE ADMINISTRADOR
+        const tokenAdmin = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpZCI6ImFocmZzZGpmcyJ9.VHjPOHDh1QH5fOjWgYHjaBzeEq2WNozlkY7-7eUnQkA'; 
+        
+        // FUNCION PARA OBTENER EL TOKEN
+        localStorage.setItem('token', tokenAdmin);
+
+        // VERIFICAR QUE ES ADMIN
+        expect(_loginService.esAdmin()).toBeTruthy();
       }
     )
   }
