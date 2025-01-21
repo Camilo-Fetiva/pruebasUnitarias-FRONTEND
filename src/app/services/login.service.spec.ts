@@ -44,48 +44,53 @@ describe(
     // DEFINIR CASOS DE PRUEBA
     it(
       'Peticion POST para el inicio de sesion',
-      ()=>{
-          const mockRespuesta = { //SIMULACION DE RESPUESTA DEL BACKEND
-              mensaje: 'Inicio de sesion exitoso',
-              token: tokenTest
+      () => {
+        const mockRespuesta = { //SIMULACION DE RESPUESTA DEL BACKEND
+          mensaje: 'Inicio de sesion exitoso',
+          token: tokenTest
+        }
+
+        _loginService.inicioSesion(emailTest, passwordTest).subscribe(
+          (res) => {
+            expect(res).toEqual(mockRespuesta);
           }
+        )
 
-          _loginService.inicioSesion(emailTest, passwordTest).subscribe(
-              (res)=>{
-                  expect(res).toEqual(mockRespuesta);
-              }
-          )
+        const peticion = _httpMock.expectOne(urlTest)
+        expect(peticion.request.method).toBe('POST')
 
-          const peticion = _httpMock.expectOne(urlTest)
-          expect(peticion.request.method).toBe('POST')
-
-          // SIMULAR EL SERVIDOR
-          peticion.flush(mockRespuesta)
+        // SIMULAR EL SERVIDOR
+        peticion.flush(mockRespuesta)
       }
-  )
+    )
 
-  it(
+    it(
       'Peticion GET token para obtener el token almacenado en el local storage',
-      ()=>{
-          localStorage.setItem('token', tokenTest)
-          expect(_loginService.obtenerToken()).toBe(tokenTest);
+      () => {
+        localStorage.setItem('token', tokenTest)
+        expect(_loginService.obtenerToken()).toBe(tokenTest);
       }
-  )
+    )
 
-  it(
+    it(
       'Peticion para verificar si el usuario esta LOGED',
-      ()=>{
-          localStorage.setItem('token', tokenTest)
-          expect(_loginService.isLoged()).toBeTruthy(); //VALIDACION DE RESPUESTA BOOLEANA TRUE
+      () => {
+        localStorage.setItem('token', tokenTest)
+        expect(_loginService.isLoged()).toBeTruthy(); //VALIDACION DE RESPUESTA BOOLEANA TRUE
       }
-  )
+    )
 
-  it(
+    it(
       'Peticion para CERRAR',
-      ()=>{
-          _loginService.logOut();
-          expect(localStorage.getItem('Token')).toBeNull(); // AL CERRAR SESION SE ELIMINA EL LOCALSTORAGE
+      () => {
+        _loginService.logOut();
+        expect(localStorage.getItem('Token')).toBeNull(); // AL CERRAR SESION SE ELIMINA EL LOCALSTORAGE
+
+        // PRUEBA DE MENSAJE DE CIERRE DE SESION
+        spyOn(window, 'alert'); //SIMULAR EL ALERT
+        _loginService.logOut();
+        expect(window.alert).toHaveBeenCalledWith('Cierre de sesion exitosa');
       }
-  )
+    )
   }
 )
